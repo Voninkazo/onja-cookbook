@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Onja cookbook</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -14,19 +15,19 @@
 </header>
 <form id="form">
   <div class="recepie-container">
-    <p>What's the recepie name</p>
+    <p class="title">What's the recepie name</p>
     <input type="text" id="recepie-name" name="recepie-name" required>
-    <p>Picture of the result</p>
+    <p class="title">Picture of the result</p>
     <input type="text" name="recepie-image" id="recepie-image" required>
-    <p>Who is the cook?</p>
+    <p class="title">Who is the cook?</p>
     <input type="text" name="cook-name" id="cook-name">
-    <p>What's the difficulty?</p>
+    <p class="title">What's the difficulty?</p>
     <select name="difficulty" id="difficulty" class="select-form" required>
       <option value="easy">Easy</option>
       <option value="medium">Medium</option>
       <option value="difficult">Difficult</option>
     </select>
-    <p>How much time does it take?</p>
+    <p class="title">How much time does it take?</p>
     <select name="cooking-time" id="cooking-time">
       <option value="less-than-15min">Less than 15min</option>
       <option value="fifteen-min">15min</option>
@@ -38,17 +39,22 @@
       <option value="an-hour">An hour</option>
     </select>
   </div>
+  </div>
   <div class="ingredient-lists">
-    <p>Ingredients</p>
-    <span class="ingr-name">Water</span>
-    <span class="ingr-name">Salt</span>
+    <p class="title">Ingredients</p>
+    <ul class="item-container">
+    <li class="list-item">Water<br></li>
+    <li class="list-item">Salt<br></li>
+    </ul>
     <input class="add-ingredient" type="button" value="Add a new ingredient to the list">
   </div>
   <div class="step-lists">
-    <p>Steps</p>
-    <span>Put a pan on the fire</span>
-    <span>Crack the eggs on it</span>
-    <span>Add some salt in it</span>
+    <p class="title">Steps</p>
+    <ul class="item-conatainer">
+    <li class="list-item">Put a pan on the fire<br></li>
+    <li class="list-item">Crack the eggs on it<br></li>
+    <li class="list-item">Add some salt in it<br></li>
+    </ul>
     <input class="add-steps" type="button" value="Add a new step to the list">
   </div>
   <button class="submit-button">Submit</button>
