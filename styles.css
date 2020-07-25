@@ -47,6 +47,13 @@ input {
   font-size: 20px;
   color: #ffff;
   background-color: hotpink;
+  border-radius: 0.5rem;
+}
+
+
+.submit-button:hover {
+  background-color: coral;
+  transition-duration: 1s;
 }
 
 .ingredient-lists,
@@ -61,4 +68,16 @@ input {
 #input-ingredient,
 #input-step {
   margin-block-end: 1rem;
+}
+
+[type="button"] {
+  cursor: pointer;
+  background-color: blue;
+  color: #ffff;
+  font-weight: 600;
+}
+
+[type="button"]:hover {
+  background-color: red;
+  transition-duration: 1s;
 }
