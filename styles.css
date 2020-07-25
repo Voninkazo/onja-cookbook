@@ -41,13 +41,9 @@ input {
   margin-block-end: 1rem;
 }
 
-.list-item {
-  padding-inline-start: 2rem;
-  padding-inline-end: 2rem;
-  padding-block-start: 1rem;
-  padding-block-end: 1rem;
-  margin-block-end: 1rem;
-  margin-block-start: 1rem;
-  border: solid 1px;
-  list-style: none;
+.ingredient-lists,
+.step-lists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
