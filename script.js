@@ -5,7 +5,7 @@ const recipeName = document.querySelector('#recipe-name');
 const cookName = document.querySelector('#cook-name');
 const difficulty = document.querySelector('#difficulty');
 const duration = document.querySelector('#cooking-time');
-const image = document.querySelector('#recipe-image');
+const images = document.querySelector('#recipe-image');
 const ingredients = document.querySelector('#ingredient');
 const steps = document.querySelector('#step');
 
@@ -13,7 +13,7 @@ const steps = document.querySelector('#step');
 window.addEventListener('click', event => {
   if(event.target.matches('.add-ingredient')) {
     const myhtml =`
-    <input type="text" name="input-step" id="input-step" required>
+    <li><input type="text" name="ingredient" id="input-ingredient"></li>
     `;
     const ingredientLists = document.querySelector('#ingredient');// grab the parent element
     ingredientLists.insertAdjacentHTML('beforebegin', myhtml);// append the html inside of that parent element
@@ -22,34 +22,45 @@ window.addEventListener('click', event => {
   // listen for a click to add a new step
   if (event.target.matches('.add-steps')) {
     const myHtml = `
-    <input type="text" name="input-step" id="input-step" required>
+    <li><input type="text" name="step" id="input-step"></li>
     `;
     const stepLists = document.querySelector('#step');// grab the parent element
     stepLists.insertAdjacentHTML('afterbegin', myHtml);// append the html inside of that parent element
   }
 });
 
-// function createObject() {
-//   let steps = `${steps.value}`;
-//   steps = [];
-//   for (let i = 0; steps.length; i++) {
-//     console.log(steps);
-//   }
-//   const recipes = [
-//     {
-//       title: `${recipeName.value}`,
-//       picture: `${image.value}`,
-//       author: `${cookName.value}`,
-//       difficulty: `${difficulty.value}`,
-//       timing: `${duration.value}`,
-//       ingredients: ``,
-//       steps: ``,
-//     }
-//   ]
-//   console.log(recipes);
-// }
-// window.addEventListener('submit', event => {
-//   if(event.target.matches('.submit-button')) {
-//     createObject();
-//   }
-// });
+function createObject() {
+// looping through the steps and ingredients lists
+const ingredientInputs = document.querySelector('#ingredient');
+for(var i = 0; i < ingredientInputs.legnth; i++) {
+   return ingredientInputs[i];
+}
+
+const stepInputs = document.querySelector('#step');
+for (var i = 0; i < stepInputs.legnth; i++) {
+  return stepInputs[i];
+}
+const form = document.querySelector('#form');
+const {name, cook, image, difficulty, time} = form;
+
+  const recipes = [
+    {
+      title: `${name.value}`,
+      picture: `${image.value}`,
+      author: `${cook.value}`,
+      difficulty: `${difficulty.value}`,
+      timing: `${time.value}`,
+      ingredients: `${ingredientInputs.value}`,
+      steps: `${stepInputs.value}`,
+    }
+  ]
+  console.log(recipes);
+} createObject();
+
+
+window.addEventListener('submit', event => {
+  event.preventDefault();
+  if(event.target.matches('.submit-button')) {
+    createObject();
+  }
+});
