@@ -12,8 +12,8 @@ window.addEventListener('click', event => {
     const myhtml =`
     <input type="text" name="input-step" id="input-step" required>
     `;
-    const ingredientLists = document.querySelector('.igredient-lists');
-    ingredientLists.insertAdjacentHTML('beforeend', myhtml);
+    const ingredientLists = document.querySelector('#ingredient');
+    ingredientLists.insertAdjacentHTML('beforebegin', myhtml);
   }
 
   if (event.target.matches('.add-steps')) {
