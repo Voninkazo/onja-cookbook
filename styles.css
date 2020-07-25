@@ -42,7 +42,9 @@ input {
 }
 
 .ingredient-lists,
-.step-lists {
+.step-lists,
+#step,
+#ingredient {
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -14,11 +14,11 @@
   <form id="form">
     <div class="recepie-container">
       <p class="title">What's the recepie name</p>
-      <input type="text" id="recepie-name" name="recepie-name" required>
+      <input type="text" id="recepie-name" name="recepie-name" placeholder="Enter a recepie name" required>
       <p class="title">Picture of the result</p>
-      <input type="text" name="recepie-image" id="recepie-image" required>
+      <input type="text" name="recepie-image" id="recepie-image" placeholder="Enter a photo URL" required>
       <p class="title">Who is the cook?</p>
-      <input type="text" name="cook-name" id="cook-name">
+      <input type="text" name="cook-name" id="cook-name" placeholder="Eneter a cook name" required>
       <p class="title">What's the difficulty?</p>
       <select name="difficulty" id="difficulty" class="select-form" required>
         <option value="easy">Easy</option>
@@ -39,14 +39,18 @@
     </div>
     </div>
     <div class="ingredient-lists">
-      <p class="title" id="ingredient-name">Ingredients</p>
-      <input type="text" name="input-ingredient" id="input-ingredient">
-      <input class="add-ingredient" type="button" value="Add a new ingredient to the list">
+      <div id="ingredient">
+        <p class="title" id="ingredient-name">Ingredients</p>
+        <input type="text" name="input-ingredient" id="input-ingredient" required>
+        <input class="add-ingredient" type="button" value="Add a new ingredient to the list">
+      </div>
     </div>
     <div class="step-lists">
       <p class="title">Steps</p>
-      <input type="text" name="input-step" id="input-step">
-      <input class="add-steps" type="button" value="Add a new step to the list">
+      <div id="step">
+        <input type="text" name="input-step" id="input-step" required>
+        <input class="add-steps" type="button" value="Add a new step to the list">
+      </div>
     </div>
     <button class="submit-button">Submit</button>
   </form>
