@@ -13,7 +13,7 @@ const steps = document.querySelector('#step');
 window.addEventListener('click', event => {
   if(event.target.matches('.add-ingredient')) {
     const myhtml =`
-    <li><input type="text" name="ingredient" id="input-ingredient"></li>
+    <li class="list-item"><input type="text" name="ingredient" id="input-ingredient"></li>
     `;
     const ingredientLists = document.querySelector('#ingredient');// grab the parent element
     ingredientLists.insertAdjacentHTML('beforebegin', myhtml);// append the html inside of that parent element
@@ -22,7 +22,7 @@ window.addEventListener('click', event => {
   // listen for a click to add a new step
   if (event.target.matches('.add-steps')) {
     const myHtml = `
-    <li><input type="text" name="step" id="input-step"></li>
+    <li class="list-item"><input type="text" name="step" id="input-step"></li>
     `;
     const stepLists = document.querySelector('#step');// grab the parent element
     stepLists.insertAdjacentHTML('afterbegin', myHtml);// append the html inside of that parent element
@@ -43,6 +43,7 @@ for (var i = 0; i < stepInputs.legnth; i++) {
 const form = document.querySelector('#form');
 const {name, cook, image, difficulty, time} = form;
 
+// create the recipe object
   const recipes = [
     {
       title: `${name.value}`,
@@ -57,6 +58,7 @@ const {name, cook, image, difficulty, time} = form;
   console.log(recipes);
 } createObject();
 
+// handle submit button
 
 window.addEventListener('submit', event => {
   event.preventDefault();
