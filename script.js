@@ -15,8 +15,8 @@ window.addEventListener('click', event => {
     const myhtml =`
     <li class="list-item"><input type="text" name="ingredient" id="input-ingredient"></li>
     `;
-    const ingredientLists = document.querySelector('#ingredient');// grab the parent element
-    ingredientLists.insertAdjacentHTML('beforebegin', myhtml);// append the html inside of that parent element
+    const ingredientLists = document.querySelector('#input-ingredient');// grab the parent element
+    ingredientLists.insertAdjacentHTML('afterend', myhtml);// append the html inside of that parent element
   }
 
   // listen for a click to add a new step
@@ -24,8 +24,8 @@ window.addEventListener('click', event => {
     const myHtml = `
     <li class="list-item"><input type="text" name="step" id="input-step"></li>
     `;
-    const stepLists = document.querySelector('#step');// grab the parent element
-    stepLists.insertAdjacentHTML('afterbegin', myHtml);// append the html inside of that parent element
+    const stepLists = document.querySelector('#input-step');// grab the parent element
+    stepLists.insertAdjacentHTML('afterend', myHtml);// append the html inside of that parent element
   }
 });
 

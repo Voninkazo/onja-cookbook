@@ -85,3 +85,14 @@ input {
 .list-item {
   list-style: none;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+label {
+  display: flex;
+  justify-content: center;
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+}
