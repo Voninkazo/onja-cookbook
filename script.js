@@ -8,14 +8,16 @@ const duration = document.querySelector('#cooking-time');
 const images = document.querySelector('#recipe-image');
 const ingredients = document.querySelector('#ingredient');
 const steps = document.querySelector('#step');
+const ingredientLists = document.querySelector('#input-ingredient');
 
 // listen for a click to add a new ingredient
 window.addEventListener('click', event => {
   if(event.target.matches('.add-ingredient')) {
+    const number = ingredientLists.children.length + 1;
     const myhtml =`
-    <li class="list-item"><input type="text" name="ingredient" id="input-ingredient"></li>
+    <li class="list-item"><input type="text" name="ingredient${number} " id="input-ingredient"></li>
     `;
-    const ingredientLists = document.querySelector('#input-ingredient');// grab the parent element
+// grab the parent element
     ingredientLists.insertAdjacentHTML('afterend', myhtml);// append the html inside of that parent element
   }
 
